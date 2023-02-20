@@ -1,0 +1,29 @@
+{
+  "name": "background_worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js",
+    "worker": "nodemon worker.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-alts/background_worker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-alts/background_worker/issues"
+  },
+  "homepage": "https://github.com/daniel-alts/background_worker#readme",
+  "dependencies": {
+    "bull": "^4.10.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
