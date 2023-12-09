@@ -1,3 +1,6 @@
-const { Worker } = require('./workersetup');
+const { Worker } = require('./queue.worker');
+const SendEmail = require('./email.worker');
 
-Worker().start()
+Worker().listenToQueue({
+    SendEmail,
+})
