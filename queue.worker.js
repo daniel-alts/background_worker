@@ -1,4 +1,5 @@
 const Bull = require('bull');
+const SendEmail = require('./email.worker');
 
 const Worker = () => {
   const redisHost = process.env.REDIS_HOST || '127.0.0.1';
@@ -17,6 +18,11 @@ const Worker = () => {
             jobs[job.data.jobName](job.data);
             done(null);
             break;
+        case 'SendWelcomeEmail':
+          console.log('processing send email job')
+          jobs[job.data.jobName](job.data);
+          done(null);
+          break;
         case 'SendSMS':
             console.log('processing send sms job')
             jobs[job.data.jobName](job.data);

@@ -8,7 +8,7 @@ const Worker = ({ data }) => {
   // A queue for the jobs scheduled based on a routine without any external requests
   const backgroundJob = new Bull(queueName, { redis: { port: redisPort, host: redisHost } });
 
-  backgroundJob.add(data)
+  backgroundJob.add(data) // adds data to queue
 }
 
 module.exports = {
