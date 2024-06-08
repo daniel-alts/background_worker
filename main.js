@@ -4,15 +4,19 @@ const PORT = 4000;
 
 const app = express();
 
-app.post('/email', (req, res) => {
-   
-    Worker().process({ data: {
-        jobName: 'SendEmail', 
-        email: 'somemail@mail.com', 
-        jobId: Math.random() * 10000} 
-    });
+app.post('/user', (req, res) => {
 
-    return res.json({ status: true, message: 'mail sent'})
+    // userModel.create(req.body)
+
+    const data = {
+        jobId: Math.random() * 10000,
+        jobName: 'SendEmail', 
+        email: 'somemail@mail.com', // req.body.email 
+    }
+   
+    Worker({ data }); // creates data in queue
+
+    return res.json({ status: true, message: 'user created successfully'})
 })
 
 
