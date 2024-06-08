@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon main.js",
-    "worker": "nodemon worker.js"
+    "start": "node main.js",
+    "worker": "node worker.js",
+    "dev": "nodemon main.js",
+    "dev-worker": "nodemon worker.js"
   },
   "repository": {
     "type": "git",
