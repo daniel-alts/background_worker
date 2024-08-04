@@ -21,7 +21,7 @@ const Worker = () => {
     })
   
     backgroundJob.isReady().then(() => {
-        console.log('Ready to accept jobs')
+        console.log('Ready to accept jobs, workersetup.js')
     })
   }
  
